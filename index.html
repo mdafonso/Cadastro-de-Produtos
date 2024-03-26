@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cadastro-produto">
+
+
+      <div class="div-wrapper">
+        <div class="overlap">
+          <img class="perfil" src="img/perfil.jpg">
+          <h5>Olá, Mariana Duarte</h5>
+        </div>      
+      </div>
+
+
+    <div class="menu">
+      <div class="itens">
+        <h5>Início</h5>
+        <h5>Cadastro/Produtos</h5>
+        <h5>Estoque</h5>
+        <h5>Vendas</h5>
+        <h5>Clientes</h5>
+        <h5>Ordens de Compra</h5>
+        <h5>Fornecedores</h5>
+        <h5>Relatórios</h5>
+        <h5>Equipe</h5>
+        <h5>Configurações</h5>
+      </div>      
+    </div>
+
+
+    <div class="img">
+      <img class="inicio" src="img/inicio.png">
+    </div>
+    <div class="img">
+      <img class="cadastro" src="img/cadastro.png">
+    </div><div class="img">
+      <img class="estoque" src="img/estoque.png">
+    </div>
+    <div class="img">
+      <img class="venda" src="img/vendas.png">
+    </div>  
+    <div class="img">
+      <img class="cliente" src="img/cliente.png">
+    </div>
+    <div class="img">
+      <img class="ordem" src="img/ordem.png">
+    </div>
+    <div class="img">
+      <img class="fornecedor" src="img/fornecedor.png">
+    </div>
+    <div class="img">
+      <img class="relatorio" src="img/relatorio.png">
+    </div>
+    <div class="img">
+      <img class="equipe" src="img/equipe.png">
+    </div>
+    <div class="img">
+      <img class="configuracao" src="img/configuracao.png">
+    </div>
+    <div class="img">
+      <img class="logotipo" src="img/logotipo.png">
+    </div>  
+
+
+      <div class="div">
+        <div class="cadastrar">Novo Cadastro</div>
+        <div class="linha1">
+        </div>
+        <div class="overlap-group">
+          <div class="text-wrapper-1">ID</div>
+          <div class="rectangle">
+            <label for="ID"></label>
+            <input type="number" id="ID" required>
+          </div>
+          <div class="text-wrapper-2">Nome do Produto</div>
+          <div class="rectangle-1">
+            <label for="nome"></label>
+            <input type="text" id="nome" required>
+          </div>
+          <div class="text-wrapper-3">Descrição do Produto</div>
+          <div class="rectangle-2">
+            <label for="descrição"></label>
+            <input type="text" id="descrição" required>
+          </div>
+          <div class="text-wrapper-4">Valor do Produto (und)</div>
+          <div class="rectangle-3">
+            <label for="valor"></label>
+            <input type="number" id="valor" required>
+          </div>
+          <div class="text-wrapper-5">Quantidade Disponível</div>
+          <div class="rectangle-4">
+            <label for="quantidade"></label>
+            <input type="number" id="quantidade" required>
+          </div>
+          <div class="text-wrapper-6">Disponível para Venda ?</div>
+          <div class="rectangle-5">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label1" for="inlineCheckbox1">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label2" for="inlineCheckbox2">Não</label>
+            </div>
+          </div>
+          
+
+          <div class="overlap-2">
+            <button type="button" class="btn btn-salvar" onclick="salvarProduto()">CADASTRAR</button>
+          </div>
+
+          <div class="overlap-3">
+            <button type="button" class="btn btn-pesquisar" onclick="pesquisarProduto()">PESQUISAR</button>
+          </div>
+          
+          
+          <div class="lista">Cadastrados</div>
+          <div class="linha2"></div>  
+          
+          <div class="produtos">
+            <table class="tabela-excel" id="listaProdutos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            
+        </div>
+        
+        <script>
+          let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+      
+          function renderizarLista() {
+              const listaProdutos = document.querySelector('#listaProdutos tbody');
+              listaProdutos.innerHTML = '';
+      
+              ordenarProdutosPorValor();
+      
+              produtos.forEach((produto, index) => {
+                  const row = listaProdutos.insertRow();
+                  row.innerHTML = `
+                      <td>${produto.id}</td>
+                      <td>${produto.nome}</td>
+                      <td>${produto.valor}</td>
+                      <td>${produto.quantidade}</td>
+                      <td>
+                          <button class="botao botao-excluir" onclick="excluirProduto(${index})">Excluir</button>
+                          <button class="botao" onclick="modificarProdutos(${index})">Editar</button>
+                      </td>
+                  `;
+              });
+          }
+      
+          function salvarProduto() {
+              const id = document.getElementById('ID').value;
+              const nome = document.getElementById('nome').value;
+              const valor = document.getElementById('valor').value;
+              const quantidade = document.getElementById('quantidade').value;
+      
+              const novoProduto = { id, nome, valor, quantidade };
+      
+              const indexProdutoEditar = produtoParaEditar !== null ? produtoParaEditar : -1;
+      
+              if (indexProdutoEditar !== -1) {
+                  produtos[indexProdutoEditar] = novoProduto;
+                  produtoParaEditar = null;
+                  document.getElementById('btnAtualizar').style.display = 'none';
+              } else {
+                  produtos.push(novoProduto);
+              }
+      
+              localStorage.setItem('produtos', JSON.stringify(produtos));
+              limparCampos();
+              renderizarLista();
+          }
+      
+          function excluirProduto(index) {
+              produtos.splice(index, 1);
+              localStorage.setItem('produtos', JSON.stringify(produtos));
+              renderizarLista();
+          }
+      
+          function limparCampos() {
+              document.getElementById('ID').value = '';
+              document.getElementById('nome').value = '';
+              document.getElementById('valor').value = '';
+              document.getElementById('quantidade').value = '';
+          }
+      
+          function ordenarProdutosPorValor() {
+              produtos.sort((a, b) => a.valor - b.valor);
+          }
+      
+          let produtoParaEditar = null;
+          renderizarLista();
+      </script>
+        
+        
+                  
+        </div>
+      </div>
+      
+      </div>   
+  </body>
+</html>

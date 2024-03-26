@@ -1,0 +1,562 @@
+.cadastro-produto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .cadastro-produto .div {
+    position: relative;
+    width: 1260px;
+    height: 90px;
+    
+  }
+
+.menu .itens {
+  margin: 40px; 
+  margin-top: 150px;
+  color: #ffffff; 
+}
+
+.menu .itens h5{
+  font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.img .inicio{
+    width: 20px; 
+    height: auto; 
+    margin-top: 143px;
+    margin-left: 10px; 
+}
+
+.img .cadastro{
+  
+  width: 24px; 
+  height: auto; 
+  margin-left: 8px; 
+  margin-top: 180px;
+}
+
+.img .estoque{
+  
+  width: 24px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 218px;
+}
+
+.img .venda{
+  
+  width: 23px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 262px;
+}
+
+.img .cliente{
+  
+  width: 23px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 300px;
+}
+
+.img .ordem{
+  
+  width: 23px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 338px;
+}
+
+.img .fornecedor{
+  
+  width: 23px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 378px;
+}
+
+.img .relatorio{
+  
+  width: 23px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 420px;
+}
+
+.img .equipe{
+  
+  width: 20px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 460px;
+}
+
+.img .configuracao{
+  
+  width: 20px; 
+  height: auto; 
+  margin-left: 10px; 
+  margin-top: 500px;
+}
+
+.img .logotipo{
+  
+  width: 100px; 
+  height: auto; 
+  margin-top: 20px;
+  margin-left: 50px;
+}
+  
+  .cadastro-produto .overlap {
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    border-radius: 95px;
+  }
+  .cadastro-produto .overlap h5{
+    margin-left: 770px; 
+    margin-top: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #ffffff;
+  }
+  
+  .cadastro-produto .perfil {
+    position: absolute;
+    width: 65px; 
+    height: auto; 
+    margin-top: 8px;
+    margin-left: 910px;
+  
+    
+    top: 1px;
+    left: 5px;
+    border-radius: 95%;
+    object-fit: cover;
+  }
+  
+  .cadastro-produto .overlap-group {
+    position: fixed;
+    width: 1240px;
+    height: 700px;
+    top: 90px;
+    margin-left: 30px;
+    background-color: #d9d9d933;
+  }
+ 
+  .btn {
+    display: inline-block;
+    background:#FFBD13 ;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-top: -3px;
+    border-radius: 6px;
+    border: 2px solid #FFBD13;
+    margin-left: 50px;
+    transition: all 0.3s ease;
+}
+
+  .btn:hover{
+    color: white;
+    background: #3070F7;
+    border: 2px solid #3070F7;
+    
+}
+
+.cadastro-produto .cadastrar {
+  position: fixed;
+  width: 168px;
+  top: 110px;
+  left: 245px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.cadastro-produto .linha1{
+  position: fixed;
+    width: 500px;
+    height: 2px;
+    top: 140px;
+    margin-left: 30px;
+    background-color:#00000026;
+}
+
+.cadastro-produto .lista {
+  position: absolute;
+  width: 168px;
+  top: 330px;
+  left: 50px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.cadastro-produto .linha2{
+  position: absolute;
+    width: 500px;
+    height: 2px;
+    top: 360px;
+    background-color:#00000026;
+}
+
+   .rectangle input {
+    width: 200%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+  .cadastro-produto .rectangle {
+    position: absolute;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    top: 105px;
+    left: 90px;
+    width: 170px;
+  }
+
+.rectangle-1 input {
+    width: 200%; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.cadastro-produto .rectangle-1 {
+    font-weight: bold;
+    margin-bottom: 55px; 
+    top: 105px;
+    position: absolute;
+    left: 475px;
+    width: 170px;
+    
+}
+
+.rectangle-2 input {
+  width: 200%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cadastro-produto .rectangle-2 {
+  font-weight: bold;
+  margin-bottom: 55px; 
+  top: 105px;
+  position: absolute;
+  left: 860px;
+  width: 170px;
+  
+}
+
+.rectangle-3 input {
+  width: 200%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cadastro-produto .rectangle-3 {
+  font-weight: bold;
+  margin-bottom: 55px; 
+  top: 190px;
+  position: absolute;
+  left: 90px;
+  width: 170px;
+}
+
+.rectangle-4 input {
+  width: 200%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cadastro-produto .rectangle-4 {
+  font-weight: bold;
+  margin-bottom: 55px; 
+  top: 190px;
+  position: absolute;
+  left: 475px;
+  width: 170px;
+}
+
+.rectangle-5 input {
+  width: 200%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cadastro-produto .rectangle-5 {
+  font-weight: bold;
+  margin-bottom: 55px; 
+  top: 190px;
+  position: absolute;
+  left: 852px;
+  width: 170px;
+}
+
+.form-check-inline {
+  display: inline-block;
+  margin-top: 7px;
+  top: 200px;
+  margin-right: 55px; /* Define a margem direita para separar os elementos */
+  
+}
+
+.form-check-label1{
+  position: absolute;
+    width: 168px;
+    top: 10px;
+    left: 40px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+
+.form-check-label2{
+  position: absolute;
+    width: 168px;
+    top: 10px;
+    left: 120px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+    
+  .cadastro-produto .overlap-2 {
+    position: absolute;
+    width: 196px;
+    height: 29px;
+    top: 260px;
+    left: 610px;
+
+ }  .cadastro-produto .overlap-3 {
+  position: absolute;
+  width: 196px;
+  height: 29px;
+  top: 260px;
+  left: 460px;
+}
+  
+  .cadastro-produto .img {
+    width: 196px;
+    top: 1px;
+    left: 0;
+    position: absolute;
+    height: 28px;
+  }
+  .cadastro-produto .text-wrapper-1 {
+    position: absolute;
+    width: 168px;
+    top: 90px;
+    left: 100px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  .cadastro-produto .text-wrapper-2 {
+    position: absolute;
+    width: 168px;
+    top: 90px;
+    left: 485px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .cadastro-produto .text-wrapper-3 {
+    position: absolute;
+    width: 168px;
+    top: 90px;
+    left: 870px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .cadastro-produto .text-wrapper-4 {
+    position: absolute;
+    width: 168px;
+    top: 175px;
+    left: 100px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .cadastro-produto .text-wrapper-5 {
+    position: absolute;
+    width: 168px;
+    top: 175px;
+    left: 485px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .cadastro-produto .text-wrapper-6 {
+    position: absolute;
+    width: 168px;
+    top: 175px;
+    left: 870px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+ 
+  .cadastro-produto .alunos  {
+    position: absolute;
+    width: 850px;
+    top: 520px;
+    left: 50px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 5;
+    line-height: normal;
+  }
+  
+  .cadastro-produto .div-wrapper {
+    position: fixed;
+    width: 1242px;
+    height: 90px;
+    top: 0px;
+    margin-left: 38px;
+    background-color: #3C3F45;
+  }
+  
+  .cadastro-produto .text-wrapper-9 {
+    position: absolute;
+    width: 931px;
+    top: 23px;
+    left: 28px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 55px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .cadastro-produto .text-wrapper-10 {
+    position: absolute;
+    top: 415px;
+    left: 90px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .cadastro-produto .menu{
+    position: fixed;
+    width: 200px;
+    height: 832px; 
+    top: 0px; 
+    left: 0px;
+    background-color: #3070F7;
+  }
+
+
+  .tabela-excel {
+    border-collapse: collapse;
+    width: 100%;
+    position: absolute;
+    width: 1120px;
+    height: 100px; 
+    top: 400px; 
+    left: 90px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 5px;
+    border: 1px solid #ffffff;
+}
+
+.tabela-excel th, .tabela-excel td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabela-excel th {
+    background-color: #ffffff;
+}
+
+
+.botao {
+    background-color: #FFBD13;
+    border: none;
+    color: #000000;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 2px solid #FFBD13;
+    transition: all 0.3s ease;
+}
+
+
+.botao:hover {
+  color: white;
+  background: #3070F7;
+  border: 2px solid #3070F7;
+}  
